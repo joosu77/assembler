@@ -41,6 +41,7 @@ div	ECX		; 0xffff9fxx ümbruses ehk kahe aadressi liitmisel
 mov	EDI, EAX	; tekib overflow, selle ennetamiseks jagan kumbagi
 mov	EAX, EBX	; aadressit eraldi kahega ning liidan alles siis
 mov	EDX, 0		; kokku registrisse EAX
+mov	ECX, 2
 div	ECX
 add	EAX, EDI
 
@@ -49,8 +50,7 @@ mov	EDI, EAX	; dubleerin tulemuse EDI registrisse
 mov	EDX, 0
 mov	ECX, 4		; kontrollin kas saadud tulemus jagub 4ga, kui ei jagu,
 div	ECX		; on tegu paarisarv elemente massiivis ehk keskmist
-add	EDI, EDX	; elementi ei leidu, sel juhul lahutan jäägi tulemusest
-neg	EDI
+sub	EDI, EDX	; elementi ei leidu, sel juhul lahutan jäägi tulemusest
 
 push	EDI		; panen massiivi alguse ja keskkoha pointerid stacki
 push	EBX		; ja kutsun funktsiooni rekursiivselt välja
