@@ -2,7 +2,11 @@ global inplace_merge
 
 section .text
 ; -----------------------------------------------------------------------------
-; Merge sort:
+; Inplace merge sort:
+; * jaotab massiivi kaheks ligikaudu võrdseks osaks, kutsub kummagi
+;   osa peal rekursiivselt ennast välja ning seejärel paneb saadud
+;   kaks sorteeritud juppi kokku all kirjeldatud algoritmi abil,
+;   mis ei kasuta lisa mälu
 ; * eismene argument pointer esimesele elemendile
 ; * teine argument pointer viimasele elemendile
 ; -----------------------------------------------------------------------------

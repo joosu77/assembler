@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -m32 -g
-ASM_FUNKID = quick.o inplace_merge.o
+ASM_FUNKID = quick.o inplace_merge.o bin_search.o
 
 all: main test
 
