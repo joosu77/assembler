@@ -1,10 +1,18 @@
 #include <stdio.h>
+#include "deque.h"
 
 //void mergeSort(int* arr, int len);
 int test(int a);
 //void quick(int* arr, int* lopp);
 
 void main(){
+    struct Deque* d = loo_deque();
+    lykka_pahe(d, 10);
+    lykka_pahe(d, 5);
+    printf("%d\n", vota_saba(d));
+    printf("%d\n", vota_saba(d));
+    
+    
     /*int n, m, r;
     scanf("%d", &n);
     //scanf("%d", &m);
@@ -22,6 +30,7 @@ void main(){
     */
     
     
+    /*
     int arr1[] = {4,3};
     int arr2[] = {2,1};
     int m=2;
@@ -44,6 +53,8 @@ void main(){
     for (i=0; i<n; i++){
         printf("%d", arr2[i]);
     }
+    */
+    
     /*
     int n,m,r;
     scanf("%d", &n);

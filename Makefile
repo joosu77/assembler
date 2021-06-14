@@ -22,6 +22,10 @@ test.o: test.asm
 merge.o: merge.asm
 	nasm -f elf merge.asm -o merge.o
 
+snake: snake.c deque.c
+	gcc snake.c deque.c -lGLU -lglut -lGL -lm -o snake
+
+
 #inplace_merge.o: inplace_merge.asm
 #	nasm -f elf inplace_merge.asm -o inplace_merge.o
 
